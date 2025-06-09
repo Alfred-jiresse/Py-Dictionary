@@ -6,6 +6,7 @@ qui va recevoir une listes mot, lookup_counter qui est un contaire qui va nous s
 tout au long de ce projet pour compter les mots, word qui est le mot lui meme et definition qui va stocker sa defnition'''
 
 def add_word(entries, lookup_counter, word, definition):
+    
     # on verifie si le mot exist deja dans le dictionnaire pour l'ajouter
     if word in entries:
         return False
