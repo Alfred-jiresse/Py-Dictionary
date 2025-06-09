@@ -8,11 +8,14 @@ def add_word(entries, lookup_counter, word, definition):
     lookup_counter[word] = 0
     return True
 
+# fonction pour avoir la definition du mot
+
 def get_definition(entries, lookup_counter, word):
     if word in entries:
         lookup_counter[word] += 1
         return entries[word]
     return None
+# fonction pour mettre a jour une definition
 
 def update_definition(entries, word, new_definition):
     if word not in entries:
