@@ -84,3 +84,4 @@ def get_words_starting_with(entries, letter):
 
 def get_words_containing(entries, sequence):
     return sorted([word for word in entries if sequence in word])
+
