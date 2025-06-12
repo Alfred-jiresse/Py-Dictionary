@@ -26,4 +26,5 @@ Créer une application CLI permettant :
 1. **Fork** ce dépôt (bouton en haut à droite)
 2. **Clone** ton fork :
    ```bash
-   git clone https://github.com/ton-pseudo/py_dictionary.git
+   git clone https://github.com/Alfred-jiresse/py_dictionary.git
+   
