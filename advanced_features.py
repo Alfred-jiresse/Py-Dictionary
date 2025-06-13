@@ -97,3 +97,17 @@ if __name__ == "__main__":
             "consultations": 2
         }
     }
+    # Appels des fonctions avec affichage des résultats
+    print("Mots contenant 'prog':", rechercher_par_mot_cle(dictionnaire, "prog"))
+    print("Mots commençant par 'p':", mots_par_lettre(dictionnaire, "p"))
+    print("Mots contenant 'tion':", mots_par_sequence(dictionnaire, "tion"))
+
+    stats = statistiques(dictionnaire)
+    print("Statistiques du dictionnaire :")
+    print(" - Total de mots :", stats["total"])
+    print(" - Mot le plus long :", stats["mot_plus_long"])
+    print(" - Mot le plus court :", stats["mot_plus_court"])
+    print(" - Mot aléatoire :", stats["mot_aleatoire"])
+
+    incrementer_consultation(dictionnaire, "python")
+    print("Mots les plus consultés :", mots_plus_consultes(dictionnaire))
