@@ -3,7 +3,7 @@ import random  # Pour choisir un mot aléatoire dans le dictionnaire
 # 1. Recherche par mot-clé dans les définitions
 def rechercher_par_mot_cle(dictionnaire, mot_cle):
     """
-    Trouve et retourne les mots don’t la définition contient le mot-clé donné.
+    Trouve et retourne les mots don't la définition contient le mot-clé donné.
     """
     resultat = []
     for mot, infos in dictionnaire.items():  # Parcours chaque mot et ses informations
@@ -61,7 +61,7 @@ def statistiques(dictionnaire):
 # 5. Incrémenter les consultations d’un mot
 def incrementer_consultation(dictionnaire, mot):
     """
-    Incrémente le compteur de consultation d’un mot existant.
+    Incrémente le compteur de consultation d'un mot existant.
     """
     if mot in dictionnaire:
         dictionnaire[mot]["consultations"] += 1  # Augmente de 1 à chaque appel
@@ -78,4 +78,22 @@ def mots_plus_consultes(dictionnaire, nombre=5):
         reverse=True
     )
     return mots_tries[:nombre]  # Retourne les ‘nombre’ premiers
+
 '''------------------PARTIE_TESTE-------------------'''
+# Ce bloc ne s’exécute que si le fichier est lancé directement (et pas importé dans un autre fichier)
+if __name__ == "__main__":
+    # Petit dictionnaire d’exemple pour tester
+    dictionnaire = {
+        "python": {
+            "definition": "Langage de programmation moderne.",
+            "consultations": 3
+        },
+        "algorithme": {
+            "definition": "Suite d'instructions pour résoudre un problème.",
+            "consultations": 7
+        },
+        "dictionnaire": {
+            "definition": "Structure de données permettant de stocker des paires clé-valeur.",
+            "consultations": 2
+        }
+    }
