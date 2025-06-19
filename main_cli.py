@@ -1,4 +1,3 @@
-import random
 from Core_Dictionary import ajouter_mot, lister_mots, modifier_definition, mots_commencant_par, obtenir_definition, mots_contenant, rechercher_dans_definitions, statistiques_consultation, suggerer_mots_similaires, supprimer_mot
 from export_bonus import exporter_vers_csv, exporter_vers_txt, jouer_au_jeu, mot_aleatoire
 from Data_storage import charger, sauvegarder
