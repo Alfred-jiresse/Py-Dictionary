@@ -24,7 +24,7 @@ def get_definition(entries, lookup_counter, word):
         return entries[word]
     return None
 
-'''onction pour mettre a jour une definition
+'''fonction pour mettre a jour une definition
 elle prend aussi 3 paramettre dont un nouveau que nous n'avons pas encore expliquer 
 new_definition comme sont nom l'indique va permettre de recuprere une nouvelle definition du mot'''
 
@@ -84,3 +84,4 @@ def get_words_starting_with(entries, letter):
 
 def get_words_containing(entries, sequence):
     return sorted([word for word in entries if sequence in word])
+
