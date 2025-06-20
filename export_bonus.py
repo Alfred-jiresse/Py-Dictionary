@@ -1,6 +1,8 @@
+ # Importe la fonction de tirage aléatoire d'un mot depuis un module externe
+
 import csv
 import random
-from advanced_features import mot_aleatoire  # Importe la fonction de tirage aléatoire d'un mot depuis un module externe
+from advanced_features import mot_aleatoire 
 
 # --- Exportation du dictionnaire dans un fichier texte ---
 def exporter_vers_txt(dictionnaire, chemin):
