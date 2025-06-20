@@ -75,7 +75,7 @@ def statistiques_consultation(dictionnaire, compteur_consultation):
         'mot_le_plus_court': min(dictionnaire, key=len),
     }
 
-# fonction pour rechercher le mot commençant par une (x) lettre
+# fonction pour rechercher le mot commençant par une  (x) lettre
 
 def mots_commencant_par(dictionnaire, lettre):
     return sorted([mot for mot in dictionnaire if mot.startswith(lettre)])
