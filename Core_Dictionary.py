@@ -6,7 +6,6 @@ qui va recevoir une listes mot, lookup_counter qui est un contaire qui va nous s
 tout au long de ce projet pour compter les mots, word qui est le mot lui meme et definition qui va stocker sa defnition'''
 
 def ajouter_mot(dictionnaire, compteur_consultation, mot, definition):
-     # on verifie si le mot exist deja dans le dictionnaire pour l'ajouter
     if mot in dictionnaire:
         return False
     dictionnaire[mot] = definition
@@ -17,17 +16,16 @@ def ajouter_mot(dictionnaire, compteur_consultation, mot, definition):
 cette fonction prend 3 paramettre pour mieux comprendre ce paramettre 
 voir le commentaire sur le fonction add_Word'''
 
-
 def obtenir_definition(dictionnaire, compteur_consultation, mot):
     if mot in dictionnaire:
         compteur_consultation[mot] += 1
         return dictionnaire[mot]
     return None
 
+
 '''onction pour mettre a jour une definition
 elle prend aussi 3 paramettre dont un nouveau que nous n'avons pas encore expliquer 
 new_definition comme sont nom l'indique va permettre de recuprere une nouvelle definition du mot'''
-
 
 def modifier_definition(dictionnaire, mot, nouvelle_definition):
     if mot not in dictionnaire:
@@ -36,7 +34,6 @@ def modifier_definition(dictionnaire, mot, nouvelle_definition):
     return True
 
 # fonction permettant de supprimer un mot du dictionnaire
-
 
 def supprimer_mot(dictionnaire, compteur_consultation, mot):
     if mot in dictionnaire:
@@ -50,21 +47,21 @@ def supprimer_mot(dictionnaire, compteur_consultation, mot):
 def lister_mots(dictionnaire):
     return sorted(dictionnaire.keys())
 
-# comme son nom l'indique cette fonction est là pour nous permettre de faire une recherche de la definition d'un mot
+
+# fonction pour chercher une definition dans le dictionnaire
+
 def rechercher_dans_definitions(dictionnaire, mot_cle):
     return [mot for mot, definition in dictionnaire.items()
             if mot_cle.lower() in definition.lower()]
 
-'''pour pouvoir faire en sorte que notre programme suggere certains mots a l'utilisateur 
-nous allons implementer une fonction pour nous permettre de faire cette operation'''
-
+# fonction pour suggerer des motss similaire a l'utilisateur
 
 def suggerer_mots_similaires(dictionnaire, mot, n=3):
     motif = rf".*{re.escape(mot)}.*"
     correspondances = [m for m in dictionnaire.keys() if re.match(motif, m)]
     return correspondances[:n]
 
-# fonction pour afficher les statitique de consultation
+# foncttion pour voir le mot le plus consulter
 
 def statistiques_consultation(dictionnaire, compteur_consultation):
     if not compteur_consultation:
@@ -78,11 +75,12 @@ def statistiques_consultation(dictionnaire, compteur_consultation):
         'mot_le_plus_court': min(dictionnaire, key=len),
     }
 
-# implementation de la fonction pour rechercher le mot commençant par une certaines lettre
+# fonction pour rechercher le mot commençant par une (x) lettre
+
 def mots_commencant_par(dictionnaire, lettre):
     return sorted([mot for mot in dictionnaire if mot.startswith(lettre)])
 
-# implementation de la fonction pour rechercher le mot contenant un certain caractere ou une suite de mot
+# fonction pour avoir le mot qui contienne une sequence des mots
 
 def mots_contenant(dictionnaire, sequence):
     return sorted([mot for mot in dictionnaire if sequence in mot])
