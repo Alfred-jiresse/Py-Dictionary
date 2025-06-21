@@ -18,8 +18,10 @@ Elle offre les fonctionnalités suivantes :
 
 ## Membres du projet
 
-* Alfred Jiresse (Développeur principal)
-* \[Ajouter les noms des autres membres s’il y en a]
+* MBALA BISELELA Jiresse 
+* MASUDI TONY Tony
+* MBAYA KATENDE Djo
+* MAUWA ZAKWANI Annick
 
 ---
 
